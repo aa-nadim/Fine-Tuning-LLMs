@@ -5,7 +5,7 @@ from transformers import Trainer, TrainingArguments, AutoModelForImageClassifica
 from datasets import load_dataset
 import wandb
 
-wandb.init(project="flux_train_replicate", entity="your_wandb_entity")
+wandb.init(project="flux_train_replicate", entity="aa-nadim")
 
 # Set up training parameters
 training_args = TrainingArguments(
@@ -26,7 +26,7 @@ training_args = TrainingArguments(
 model_name = "black-forest-labs/FLUX.1-schnell" 
 model = AutoModelForImageClassification.from_pretrained(model_name)
 
-dataset = load_dataset("path_to_your_dataset")
+dataset = load_dataset("/akib.zip")
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
